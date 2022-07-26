@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Assignment 8
+        </title>
+    </head>
+    <body>
+        <img id="image" onmouseover="changeimg(this)" onmouseout="ogimg(this)" style="height: 250px;width: 250px;" src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Gluehlampe_01_KMJ.jpg">
+        <script>
+            function changeimg(){
+                var image=document.getElementById("image");
+                image.src="https://img.freepik.com/free-vector/realistic-light-bulb-with-electricity_23-2149129410.jpg?w=2000";
+            }
+            function ogimg(){
+                var image= document.getElementById("image")
+                image.src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Gluehlampe_01_KMJ.jpg";
+            }
+        </script>
+    </body>
+</html>

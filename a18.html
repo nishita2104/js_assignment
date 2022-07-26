@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Assignment 18
+        </title>
+    </head>
+    <script>
+        var o1,o2,o3,o4,o5;
+        function openwindow(){
+            var w=window.screen.width;
+            w=w-200;
+            var h=window.screen.height;
+            h=h-200;
+            o1=window.open("https://www.google.com","","width=200,height=200");
+            o2=window.open("https://www.google.com","","width=200,height=200,left="+w);
+            o3=window.open("https://www.google.com","","width=200,height=200,top="+h);
+            o4=window.open("https://www.google.com","","width=200,height=200,left="+w+",top="+h);
+            h=(window.screen.height/2)-100;
+            w=(window.screen.width/2)-100;
+            o5=window.open("https://www.google.com","","width=200,height=200,top="+h+",left="+w);
+        }
+        function closewindow(){
+            o1.close();
+            o2.close();
+            o3.close();
+            o4.close();
+            o5.close();
+            close();
+        }
+    </script>
+    <body>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Gluehlampe_01_KMJ.jpg" onclick="openwindow()" style="height: 50px;width:50px">
+        <br><button onclick="closewindow()">Close</button>
+    </body>
+    
+</html>

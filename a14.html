@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Assignment 14
+        </title>
+        <script>
+            var a=0;
+            function count(){
+                a++;
+                var img=document.getElementById("image");
+                if (a==2){
+                    img.src="https://e7.pngegg.com/pngimages/990/675/png-clipart-number-information-skill-number-2-english-text.png";
+                }
+                else if(a==3){
+                    img.src="https://pngimg.com/uploads/number3/number3_PNG14957.png";
+                }
+                else if(a==4){
+                    img.src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/MA_Route_4.svg/2048px-MA_Route_4.svg.png";
+                }
+                else if(a==5){
+                    img.src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/NYCS-bull-trans-5-red.svg/1024px-NYCS-bull-trans-5-red.svg.png";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <img id="image" onclick="count()" style="height: 250px;width: 250px;" src="https://w7.pngwing.com/pngs/682/981/png-transparent-number-1-miscellaneous-rectangle-number-thumbnail.png">
+    </body>
+</html>

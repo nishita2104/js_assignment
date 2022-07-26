@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+<title>Slide show (6 images)</title>
+<script>
+
+var counter = 1
+
+function forward() {
+
+	if (counter == 1) {
+        document.getElementById("back").style.visibility='visible';
+		document.searchImage.src = "http://www.webhammer.com/javascript/examples/slide_show/yahoo.gif"
+		counter = 2
+	}
+	else if (counter == 2) {
+        document.getElementById("back").style.visibility='visible';
+		document.searchImage.src = "http://www.webhammer.com/javascript/examples/slide_show/lycos.gif"
+		counter = 3
+	}
+	else if (counter == 3) {
+        document.getElementById("back").style.visibility='visible';
+		document.searchImage.src = "http://www.webhammer.com/javascript/examples/slide_show/infoseek.gif"
+		counter = 4
+	}
+	else if (counter == 4) {
+        document.getElementById("back").style.visibility='visible';
+		document.searchImage.src = "http://www.webhammer.com/javascript/examples/slide_show/webcrawler.gif"
+		counter = 5
+	}
+	else if (counter == 5) {
+        document.getElementById("back").style.visibility='visible';
+        document.getElementById("forward").style.visibility='hidden';
+		document.searchImage.src = "http://www.webhammer.com/javascript/examples/slide_show/metacrawler.gif"
+		counter = 6
+	}
+	/*else {
+		document.searchImage.src = "http://www.webhammer.com/javascript/examples/slide_show/altavista.gif"
+		counter = 1
+	}*/
+
+}
+function back(){
+	if (counter == 2) {
+        document.getElementById("forward").style.visibility='visible';
+        document.getElementById("back").style.visibility='hidden';
+		document.searchImage.src = "http://www.webhammer.com/javascript/examples/slide_show/altavista.gif"
+		counter = 1
+	}
+	else if (counter == 3) {
+        document.getElementById("forward").style.visibility='visible';
+		document.searchImage.src = "http://www.webhammer.com/javascript/examples/slide_show/yahoo.gif"
+		counter = 2
+	}
+	else if (counter == 4) {
+        document.getElementById("forward").style.visibility='visible';
+		document.searchImage.src = "http://www.webhammer.com/javascript/examples/slide_show/lycos.gif"
+		counter = 3
+	}
+	else if (counter == 5) {
+        document.getElementById("forward").style.visibility='visible';
+		document.searchImage.src = "http://www.webhammer.com/javascript/examples/slide_show/infoseek.gif"
+		counter = 4
+	}
+    else if (counter == 6) {
+        document.getElementById("back").style.visibility='visible';
+        document.getElementById("forward").style.visibility='visible';
+		document.searchImage.src = "http://www.webhammer.com/javascript/examples/slide_show/webcrawler.gif"
+		counter = 5
+	}
+}
+
+</script>
+
+</head>
+<body>
+
+<br><br><br>
+
+
+
+<img src="http://www.webhammer.com/javascript/examples/slide_show/altavista.gif" name="searchImage"><p>
+<img style="height: 100px;width: 100px;visibility: hidden;" src="https://www.kindpng.com/picc/m/233-2338375_go-back-icon-png-transparent-png.png" id="back" onclick="back()" >
+<img style="height: 100px;width: 100px;" src="https://www.pngitem.com/pimgs/m/79-796502_forward-icon-png-image-free-download-searchpng-sign.png" id="forward" onclick="forward()">
+
+
+
+
+</body>
+</html>

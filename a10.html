@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Assignment 10
+        </title>
+    </head>
+    <body>
+        <img id="img1" onmouseover="changeimg1(this)" onmouseout="ogimg1(this)" style="height: 150px;width: 150px;" src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Gluehlampe_01_KMJ.jpg">
+        <img id="img2" onmouseover="changeimg2(this)" onmouseout="ogimg2(this)" style="height: 150px;width: 150px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Red_Color.jpg/1200px-Red_Color.jpg">
+        <img id="img3" onmouseover="changeimg3(this)" onmouseout="ogimg3(this)" style="height: 150px;width: 150px;" src="https://static.wikia.nocookie.net/symbolism/images/4/43/Orange.png/revision/latest/scale-to-width-down/1200?cb=20140818120046">
+        <img id="button" onmouseover="changeimg1()+changeimg2()+changeimg3()" onmouseout="ogimg1()+ogimg2()+ogimg3()" src="https://media.istockphoto.com/photos/red-button-isolated-on-white-picture-id585171778?k=20&m=585171778&s=170667a&w=0&h=gTfQMCQyDNYZmEnRCV9Kmc_CgJSpgSFsSDu37vemInM=">
+        <script>
+            function changeimg1(){
+                var image=document.getElementById("img1");
+                image.src="https://img.freepik.com/free-vector/realistic-light-bulb-with-electricity_23-2149129410.jpg?w=2000";
+            }
+            function ogimg1(){
+                var image= document.getElementById("img1")
+                image.src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Gluehlampe_01_KMJ.jpg";
+            }
+            function changeimg2(){
+                var image=document.getElementById("img2");
+                image.src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Solid_blue.svg/800px-Solid_blue.svg.png";
+            }
+            function ogimg2(){
+                var image= document.getElementById("img2")
+                image.src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Red_Color.jpg/1200px-Red_Color.jpg";
+            }
+            function changeimg3(){
+                var image=document.getElementById("img3");
+                image.src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Flag_of_Libya_%281977%E2%80%932011%2C_3-2%29.svg/1200px-Flag_of_Libya_%281977%E2%80%932011%2C_3-2%29.svg.png";
+            }
+            function ogimg3(){
+                var image= document.getElementById("img3")
+                image.src="https://static.wikia.nocookie.net/symbolism/images/4/43/Orange.png/revision/latest/scale-to-width-down/1200?cb=20140818120046";
+            }
+        </script>
+    </body>
+</html>

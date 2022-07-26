@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Assignment 17
+        </title>
+    </head>
+    
+    <script>
+        var openedwindow;
+        function openwindow(){
+            openedwindow = window.open("https://www.google.com","","width=500,height=500,top=500");
+        }
+        function closewindow(){
+            openedwindow.close();
+        }
+    </script>
+    <body>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Gluehlampe_01_KMJ.jpg" onclick="openwindow()" style="height: 50px;width:50px">
+        <br><button onclick="closewindow()">Close</button>
+    </body>
+    </html>
+//does not work more than once
