@@ -1,4 +1,3 @@
-//incomplete
 <!DOCTYPE html>
 <html>
     <head>
@@ -7,15 +6,44 @@
         </title>
     </head>
     <body>
-        <img id="marble1" style="margin-left: 40px;" src="http://www.webhammer.com/javascript/materials/marble1.jpg">
-        <img id="marble2" src="http://www.webhammer.com/javascript/materials/marble1.jpg"><br>
-        <img id="marble3" src="http://www.webhammer.com/javascript/materials/marble1.jpg">
-        <img id="marble4" src="http://www.webhammer.com/javascript/materials/marble1.jpg">
-        <img id="marble5" src="http://www.webhammer.com/javascript/materials/marble1.jpg"><br>
-        <img id="marble6" style="margin-left: 40px;" src="http://www.webhammer.com/javascript/materials/marble1.jpg">
-        <img id="marble7" src="http://www.webhammer.com/javascript/materials/marble1.jpg">
+        <img id="1" style="margin-left: 40px;" src="http://www.webhammer.com/javascript/materials/marble1.jpg" onmouseover="pauseAnim()" onmouseout="resumeAnim()">
+        <img id="2" src="http://www.webhammer.com/javascript/materials/marble1.jpg" onmouseover="pauseAnim()" onmouseout="resumeAnim()"><br>
+        <img id="6" src="http://www.webhammer.com/javascript/materials/marble1.jpg"onmouseover="pauseAnim()" onmouseout="resumeAnim()">
+        <img id="7" src="http://www.webhammer.com/javascript/materials/marble1.jpg"onmouseover="pauseAnim()" onmouseout="resumeAnim()">
+        <img id="3" src="http://www.webhammer.com/javascript/materials/marble1.jpg"onmouseover="pauseAnim()" onmouseout="resumeAnim()"><br>
+        <img id="5" style="margin-left: 40px;" src="http://www.webhammer.com/javascript/materials/marble1.jpg"onmouseover="pauseAnim()" onmouseout="resumeAnim()">
+        <img id="4" src="http://www.webhammer.com/javascript/materials/marble1.jpg"onmouseover="pauseAnim()" onmouseout="resumeAnim()">
         <script>
-            
+            let myInterval1 = setInterval(anim, 1000);
+        let x = 1;
+
+        function anim() {
+            var img = document.getElementById(x);
+            img.src = "http://www.webhammer.com/javascript/materials/marble1.jpg";
+            img.style.height = "70px";
+            img.style.width = "70px";
+            if (x < 6) {
+                x++;
+            } else {
+                x = 1;
+            }
+            var img = document.getElementById(x);
+            img.src = "https://img.favpng.com/5/13/12/marble-ball-orange-png-png-favpng-5TJpt5pXLMPNguSxsCtdaLfGV.jpg";
+            img.style.height = "70px";
+            img.style.width = "70px";
+        }
+
+
+        function pauseAnim() {
+            clearInterval(myInterval1);
+            let p = x;
+            //console.log("pause");
+        }
+
+        function resumeAnim() {
+            myInterval1 = setInterval(anim, 1000)
+            //console.log("res");
+        }
         </script>
     </body>
 </html>

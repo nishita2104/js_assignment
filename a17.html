@@ -7,12 +7,22 @@
     </head>
     
     <script>
-        var openedwindow;
+        var openedwindow=[];
+        var i=0;
         function openwindow(){
-            openedwindow = window.open("https://www.google.com","","width=500,height=500,top=500");
+            openedwindow[i] = window.open("https://www.google.com","","width=500,height=500,top=500");
+            i++;
         }
         function closewindow(){
-            openedwindow.close();
+            // while (i > 0) {
+            //     (wins.pop()).close();
+            //     console.log("deleted");
+            //     i--;
+            // }
+            while(i>0){
+            (openedwindow.pop()).close();
+            i--;
+        }
         }
     </script>
     <body>
@@ -20,4 +30,3 @@
         <br><button onclick="closewindow()">Close</button>
     </body>
     </html>
-//does not work more than once

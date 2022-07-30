@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Assignment 19
+        </title>
+    </head>
+    <script>
+        function setCookie(cname, cvalue, exdays) {
+            var visits =0;
+  const d = new Date();
+  
+  d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+  let expires = "expires="+d.toUTCString();
+  const t = new Date();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";"+"visits"+visits+"last_visit=" + t+";"+";path=/";
+}
+
+function getCookie(cname) {
+  let name = cname + "=";
+  let ca = document.cookie.split(';');
+  for(let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function checkCookie() {
+  let user = getCookie("username");
+  var v=getCookie("visits");
+  let tt = getCookie("last_visit");
+  console.log(tt);
+  v++;
+  if(v==1){alert("Welcome"+user+" This is your first time here.")
+setCookie("visits",v,365)
+}
+  else{
+  if (user != "") {
+    alert("Welcome again " + user+"you visited "+v+" times. You last visited on "+tt);
+    setCookie("visits",v,365);
+    setCookie("last_visit", tt,365);
+    
+  } else {
+    user = prompt("Please enter your name:", "");
+    if (user != "" && user != null) {
+      setCookie("username", user, 365);
+      setCookie("visits",visits,365);
+      setCookie("last_visit", tt,365);
+    }
+  }
+}
+}
+function newname(){
+  var user = prompt("Please enter your name:", "");
+    if (user != "" && user != null) {
+      setCookie("username", user, 365);
+      setCookie("visits",0,365)}
+}
+    </script>
+    <body>
+        <img onload="checkCookie()" src="http://www.webhammer.com/javascript/examples/slide_show/lycos.gif">
+    </body>
+</html>
